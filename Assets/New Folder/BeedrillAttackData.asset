@@ -18,7 +18,7 @@ MonoBehaviour:
     maxDamage: 80
     attackDuration: 2
     animationName: Attack1
-    soundName: 
+    soundName: Beedrill 015
   - attackNamne: Grito
     minDamage: 30
     maxDamage: 80

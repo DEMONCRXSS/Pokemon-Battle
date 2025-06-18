@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     public float CurrentHealth => _currentHealth;
     [SerializeField]
 
-    private UnityEvent _onTakeDamage;
+    private UnityEvent<float> _onTakeDamage;
     [SerializeField]
 
     private UnityEvent _onDie;
@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _currentHealth -= damage;
-        _onTakeDamage.Invoke();
+        _onTakeDamage.Invoke(float damage);
         if (_currentHealth <= 0 )
         {
             Die();

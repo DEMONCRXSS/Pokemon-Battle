@@ -18,10 +18,10 @@ MonoBehaviour:
     maxDamage: 80
     attackDuration: 2
     animationName: Attack1
-    soundName: 
+    soundName: AttackDragapult
   - attackNamne: Grito
     minDamage: 30
     maxDamage: 80
     attackDuration: 2
     animationName: Grito
-    soundName: 
+    soundName: "DragapultDa\xF1o"
