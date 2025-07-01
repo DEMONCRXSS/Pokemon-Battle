@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _currentHealth -= damage;
-        _onTakeDamage.Invoke(float damage);
+        _onTakeDamage.Invoke(damage);
         if (_currentHealth <= 0 )
         {
             Die();

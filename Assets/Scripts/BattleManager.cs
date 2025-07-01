@@ -102,15 +102,14 @@ public class BattleMAnager : MonoBehaviour
             attacker.transform.LookAt(defender.transform);
             defender.transform.LookAt(attacker.transform);
             Attack attack = attacker.AttackData.attacks[Random.Range(0, attacker.AttackData.attacks.Length)];
-
             float damage = Random.Range(attack.minDamage, attack.maxDamage);
-
             attacker.CharacterAnimator.Play(attack.animationName);
-
             SoundManager.instance.Play(attack.soundName);
-
+            GameObject attackParticles = Instantiate(attack.particlesPrefab, attacker.transform.position, Quaternion.identity);
+            attackParticles.transform.SetParent(attacker.transform);
             yield return new WaitForSeconds(attack.attackDuration);
-
+            GameObject hitParticles = Instantiate(attack.hitParticlesPrefabs, defender.transform.position, Quaternion.identity);
+            hitParticles.transform.SetParent(defender.transform);
             defender.Health.TakeDamage(damage);
 
             if (defender.Health.CurrentHealth <= 0)
