@@ -10,7 +10,7 @@ public class AttackData : ScriptableObject
 
 public class Attack
 {
-    public string attackNamne;
+    public string attackName;
 
     public float minDamage;
 
@@ -24,6 +24,6 @@ public class Attack
 
     public GameObject particlesPrefab;
 
-    public GameObject hitParticlesPrefabs;
+    public GameObject hitParticlesPrefab;
 
 }
